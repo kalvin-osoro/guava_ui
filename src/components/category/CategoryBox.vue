@@ -6,12 +6,17 @@
             alt=""             
             class="card-img  embed-responsive-item"/>
         </div>         
-        <div class="card-body">
-            <h5 class="card-title">{{ category.categoryName }}</h5>
+        <div class="card-body">           
+            
+            <router-link :to="{name: 'ListProducts', params: {id: category.id} }">
+                <h5 class="card-title">{{ category.categoryName }}</h5>
+            </router-link>
+            
             <p class="card-text">
                 {{ category.description }}
             </p>
-            <router-link :to="{name: 'EditCategory', params: {id: category.id}}">
+            <router-link :to="{name: 'EditCategory', params: {id: category.id}}"
+                         v-show="$route.name == 'CategoryView'">
                 <button class="btn btn-primary">Edit</button>
             </router-link>       
             
@@ -21,11 +26,10 @@
 <script>
 
 export default {
-
     name: "CategoryBox",
     props: ["category"],
-    methods: {},     
-    }
+    methods: {},
+};
 </script>
 
 <style scoped>

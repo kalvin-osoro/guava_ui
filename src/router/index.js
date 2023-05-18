@@ -9,7 +9,7 @@ import EditCategory from '../views/category/EditCategory.vue';
 import EditProduct from '../views/product/EditProduct.vue';
 import ShowDetails from '../views/product/ShowDetails.vue';
 import WishList from '../views/product/WishList.vue';
-// import ListProducts from '../views/Category/ListProducts';
+import ListProducts from '../views/category/ListProducts.vue';
 import SignupView from '../views/SignupView.vue';
 import SigninView from '../views/SigninView.vue';
 import CartView from '../views/CartView.vue';
@@ -25,12 +25,12 @@ const routes = [
     name: 'HomeView',
     component: HomeView
   },
-  // // category detail page
-  // {
-  //   path: '/category/show/:id',
-  //   name: 'ListProducts',
-  //   component: ListProducts,
-  // },
+  // category detail page
+  {
+    path: '/category/show/:id',
+    name: 'ListProducts',
+    component: ListProducts,
+  },
   {
     path: '/admin/category/add',
     name: 'AddCategory',

@@ -61,7 +61,7 @@
                 this.path = event.target.files[0];
             },
 
-            editCategory() {
+         async  editCategory() {
                 delete this.category["products"]
                 console.log('category', this.category)
 
@@ -73,15 +73,24 @@
 
                 console.log(formData)
 
-                 axios({
+                const cacheBuster = new Date().getTime(); // Generate a unique timestamp
+
+              await   axios({
                     method: "post",
                     url: `${this.baseURL}category/update/${this.id}`,
                     data: formData,
                     headers: {
                         'Content-type': 'multipart/form-data'
+                    },
+                    params: {
+                        _cb: cacheBuster //append the cache-busting parameter
+                        //By appending _cb (or any other parameter name of your choice) with the cache-busting value to the URL, 
+                        //you ensure that the image is fetched from the server instead of the cache.
                     }
                 })
                 .then(() => {
+                    this.$emit("fetchData");
+                    this.$router.push({name: 'CategoryView'})
                     swal({
                         text: "category has been updated successfully",
                         icon: "success",
@@ -89,18 +98,7 @@
                 })
                 .catch((err => {
                     console.log(err);
-                }))
-
-                // await axios.post(`${this.baseURL}category/update/${this.id}`,
-                //     this.category)
-                //     .then(() => {
-                //         this.$emit("fetchData");
-                //         this.$router.push({name: 'category'})
-                //         swal({
-                //             text: "category has been updated successfully",
-                //             icon: "success"
-                //         })
-                //     }).catch(err => console.log('err', err));
+                }))               
             }
         },
         mounted() {

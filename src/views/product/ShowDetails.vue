@@ -9,7 +9,7 @@
         <!--            display product details-->
         <div class="col-md-6 col-12 pt-3 pt-md-0">
           <h4>{{ product.name }}</h4>
-          <!-- <h6 class="catgory font-italic">{{ category.categoryName }}</h6> -->
+          <h6 class="catgory font-italic">{{ category.categoryName }}</h6>
           <h6 class="font-weight-bold">Ksh {{ product.price }}</h6>
           <!-- <p>
             {{ product.description }}
@@ -69,13 +69,13 @@
     data() {
       return {
         product: {},
-        // category: {},
+        category: {},
         quantity: 1,
         // wishListString: "Add to wishlist",
       };
     },
     // props: ["baseURL", "products", "categories"],
-    props: ["baseURL", "products"],
+    props: ["baseURL", "products", "categories"],
     methods: {
       addToWishlist() {
         if (!this.token) {
@@ -141,9 +141,9 @@
     mounted() {
       this.id = this.$route.params.id;
       this.product = this.products.find((product) => product.id == this.id);
-    //   this.category = this.categories.find(
-    //     (category) => category.id == this.product.categoryId
-    //   );
+      this.category = this.categories.find(
+        (category) => category.id == this.product.categoryId
+      );
       this.token = localStorage.getItem("token");
     },
   };

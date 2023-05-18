@@ -63,10 +63,10 @@
               <router-link class="dropdown-item" :to="{ name: 'HomeView' }"
                 >Home
               </router-link>
-              <router-link class="dropdown-item" :to="{ name: 'HomeView' }"
+              <router-link class="dropdown-item" :to="{ name: 'ProductView' }"
                 >Product
               </router-link>
-              <router-link class="dropdown-item" :to="{ name: 'HomeView' }"
+              <router-link class="dropdown-item" :to="{ name: 'CategoryView' }"
                 >Category
               </router-link>
             </div>
@@ -99,6 +99,16 @@
                 :to="{ name: 'SigninView' }"
                 >Sign in
               </router-link>
+              <!-- ........................................................................... -->
+              <router-link
+                v-if="!token"
+                class="dropdown-item"
+                :to="{ name: 'AdminView' }"
+                >Admin
+              </router-link>
+              <!-- ........................................................................... -->
+              
+              
               <a class="dropdown-item" v-if="token" href="#" @click="signout"
                 >Sign out
               </a>

@@ -1,16 +1,19 @@
 <template>
     <div class="card w-100 h-100"> 
-        <div class="embed-responsive embed-responsive-16by9">
+        <router-link :to="{name: 'ShowDetails', params: {id : product.id}}">
+            <div class="embed-responsive embed-responsive-16by9">
             <img 
             :src="product.imagePath"             
             alt="Card image cap" 
             class="card-img  embed-responsive-item"/>           
-        </div>         
+        </div>
+        </router-link>
+                 
         <div class="card-body">
             <router-link :to="{name: 'ShowDetails', params: {id : product.id}}">
                 <h5 class="card-title">{{ product.name }}</h5>
                        
-        </router-link>
+            </router-link>
             <p class="card-text">
                 ksh {{ product.price }}
             </p>
@@ -18,11 +21,11 @@
                 {{ product.description.substring(0,65) }}...
             </p>
 
-            <!-- <router-link :to="{name: 'EditProduct', params: {id: product.id}}"
-            v-show="$route.name == 'AdminProduct'">
+           
+            <router-link :to="{name: 'EditProduct', params: {id: product.id}}"
+                          v-show="$route.name == 'AdminProduct'">
                 <button class="btn btn-primary">Edit</button>
-            </router-link>            -->
-            <a href="" class="btn btn-primary">Add to Cart</a>
+            </router-link>  
             
         </div>
     </div>
@@ -41,9 +44,9 @@ export default {
         object-fit: cover;
     }
 
-    a {
+    /* a {
         text-decoration: none;
-    }
+    } */
 
     .card-title {
         color: #484848;

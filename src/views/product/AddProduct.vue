@@ -104,7 +104,9 @@ import axios from 'axios';
                      
                  }
              })
-             .then(() => {                               
+             .then(() => { 
+                // this.$emit("fetchData");
+                    this.$router.push({name: 'ProductView'})                              
                  sweetalert({
                      text: "Product added successfully",
                      icon: "success",
