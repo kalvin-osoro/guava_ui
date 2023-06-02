@@ -17,6 +17,7 @@ import CartView from '../views/CartView.vue';
 import SuccessView from '../views/payment/SuccessView.vue';
 import FailedView from '../views/payment/FailedView.vue';
 import CheckoutView from '../views/checkout/CheckoutView.vue';
+import MpesaStkPush from '../views/checkout/MpesaStkPush.vue'
 
 
 const routes = [
@@ -134,6 +135,15 @@ const routes = [
     name: 'CheckoutView',
     component: CheckoutView,
   },
+
+  //mpesa stk push
+  {
+    path: '/checkout/mpesa',
+    name: 'MpesaStkPush',
+    component: MpesaStkPush
+  }
+
+
 
   
 ]

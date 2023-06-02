@@ -60,7 +60,7 @@
   
       <!-- display the price -->
       <div class="total-cost pt-2 text-right">
-        <h5>Total : ksh{{ totalCost.toFixed(2) }}</h5>
+        <h5>Total : ksh {{ totalCost.toFixed(2) }}</h5>
         <button type="button" class="btn btn-primary confirm" @click="checkout">
           Confirm order
         </button>
