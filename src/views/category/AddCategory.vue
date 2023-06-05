@@ -67,7 +67,9 @@
 
              console.log(formData)
  
-             const baseURL = "http://localhost:8080"
+            //  const baseURL = "http://localhost:8080"
+             const baseURL = "https://guava-app.azurewebsites.net/"
+             
              axios({
                  method: "post",
                  url: `${baseURL}/category/add-category`,                
@@ -79,6 +81,7 @@
                  }
              })
              .then(() => {
+                this.$router.push({name: 'CategoryView'}) 
                  sweetalert({
                      text: "Product added successfully",
                      icon: "success",
