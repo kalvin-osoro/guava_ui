@@ -2,4 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-createApp(App).use(router).mount('#app')
+// import Vue from "vue";
+import  CarbonComponentsVue  from "@carbon/vue";
+// Vue.use(CarbonComponentsVue);
+
+
+createApp(App).use(router).use(CarbonComponentsVue).mount('#app')
