@@ -94,8 +94,8 @@ import axios from 'axios';
 
              console.log(formData)
  
-            //  const baseURL = "http://localhost:8080"
-            const baseURL = "https://guava-app.azurewebsites.net/"
+             const baseURL = "http://localhost:8080"
+            // const baseURL = "https://guava-app.azurewebsites.net/"
              axios({
                  method: "post",
                  url: `${baseURL}/product/add-product`,                

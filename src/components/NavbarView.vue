@@ -3,7 +3,7 @@
       <!-- Navbar content -->
       <!--    Logo-->
       <router-link class="navbar-brand" :to="{ name: 'HomeView' }">
-        <img id="logo" src="../assets/icon.png"/>
+        <!-- <img id="logo" src="../assets/icon.png"/> -->
         <p>Guava</p>
       </router-link>
       <!--    Burger Button-->

@@ -43,8 +43,8 @@ export default {
     data() {
         return {
             // baseURL: "https://limitless-lake-55070.herokuapp.com/",
-            baseURL: "https://guava-app.azurewebsites.net/",
-            // baseURL: "http://localhost:8080/",
+            // baseURL: "https://guava-app.azurewebsites.net/",
+            baseURL: "http://localhost:8080/",
             products: null,
             categories: null,
             cartCount: 0,

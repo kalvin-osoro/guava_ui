@@ -28,8 +28,8 @@ export default {
    props:["products"],
     data() {
         return{
-        //    baseURL: "http://localhost:8080", 
-           baseURL: "https://guava-app.azurewebsites.net/",
+           baseURL: "http://localhost:8080", 
+        //    baseURL: "https://guava-app.azurewebsites.net/",
                      
          
         }
