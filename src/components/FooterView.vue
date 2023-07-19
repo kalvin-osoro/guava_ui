@@ -2,7 +2,7 @@
     <footer>
         <div class="container pt-5">
             <div class="row">
-                <div class="col-md-3 col-6">
+                <!-- <div class="col-md-3 col-6">
                     <ul style="list-style-type: none">
                         <li class="text-light font-weigh-bold pb-2">
                             Get to know us</li>
@@ -16,8 +16,8 @@
                             Ios App
                         </a> </li>
                     </ul>
-                </div>
-                <div class="col-md-3 col-6">
+                </div> -->
+                <!-- <div class="col-md-3 col-6">
                     <ul style="list-style-type: none">
                         <li class="text-light font-weigh-bold pb-2">
                             Connect with us</li>
@@ -31,8 +31,8 @@
                             Ios App
                         </a> </li>
                     </ul>
-                </div>
-                <div class="col-md-3 col-6">
+                </div> -->
+                <!-- <div class="col-md-3 col-6">
                     <ul style="list-style-type: none">
                         <li class="text-light font-weigh-bold pb-2">
                             Make Money with us</li>
@@ -46,8 +46,8 @@
                             Ios App
                         </a> </li>
                     </ul>
-                </div>
-                <div class="col-md-3 col-6">
+                </div> -->
+                <!-- <div class="col-md-3 col-6">
                     <ul style="list-style-type: none">
                         <li class="text-light font-weigh-bold pb-2">
                             Let us help you</li>
@@ -61,9 +61,13 @@
                             Ios App
                         </a> </li>
                     </ul>
-                </div>
+
+                </div> -->
             </div>
 
+        </div>
+        <div>
+            <li>&copy; Guava 2023.</li>
         </div>
     </footer>
 </template>
