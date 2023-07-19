@@ -1,4 +1,4 @@
-<template>
+npm <template>
     <div class="container">
       <div class="row pt-5">
         <div class="col-md-1"></div>
@@ -9,7 +9,7 @@
         <!--            display product details-->
         <div class="col-md-6 col-12 pt-3 pt-md-0">
           <h4>{{ product.name }}</h4>
-          <!-- <h6 class="catgory font-italic">{{ category.categoryName }}</h6> -->
+          <!-- <h6 class="category font-italic">{{ category.categoryName }}</h6> -->
           <h6 class="category font-italic">{{ category ? category.categoryName : '' }}</h6>
           <!-- <h6 class="category font-italic">{{ category ? category.categoryName : '' }}</h6> -->
           <h6 class="font-weight-bold">Ksh {{ product.price }}</h6>
