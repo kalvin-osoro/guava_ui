@@ -87,7 +87,7 @@
 
                 await axios({
                     method: "post",
-                    url: `${this.baseURL}product/update/${this.id}`,
+                    url: `${this.baseURL}home/product/update/${this.id}`,
                     data: formData,
                     headers: {
 

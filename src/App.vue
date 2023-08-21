@@ -55,14 +55,14 @@ export default {
         async fetchData() {
             // // api call to get all the categories
             await axios
-              .get(this.baseURL + 'category/')
+              .get(this.baseURL + 'home/category/')
               .then((res) => {
                 this.categories = res.data;
               })
               .catch((err) => console.log('err', err));
             // api call to get the products
             await axios
-                .get(this.baseURL + "product/")
+                .get(this.baseURL + "home/product/")
                 .then((res) => {
                 this.products = res.data;
             })

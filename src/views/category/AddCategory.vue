@@ -73,7 +73,7 @@
              
              axios({
                  method: "post",
-                 url: `${baseURL}/category/add-category`,                
+                 url: `${baseURL}/home/category/add-category`,                
                  data: formData,
                  headers: {
                      'Content-Type': 'multipart/form-data'

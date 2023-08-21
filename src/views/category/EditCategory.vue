@@ -77,7 +77,7 @@
 
               await   axios({
                     method: "post",
-                    url: `${this.baseURL}category/update/${this.id}`,
+                    url: `${this.baseURL}home/category/update/${this.id}`,
                     data: formData,
                     headers: {
                         'Content-type': 'multipart/form-data'

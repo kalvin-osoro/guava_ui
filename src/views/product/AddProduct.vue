@@ -99,7 +99,7 @@ import axios from 'axios';
             const baseURL = "https://springcommerce-production.up.railway.app"
              axios({
                  method: "post",
-                 url: `${baseURL}/product/add-product`,                
+                 url: `${baseURL}/home/product/add-product`,                
                  data: formData,
                  headers: {
                      'Content-Type': 'multipart/form-data'                   
